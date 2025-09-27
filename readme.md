@@ -2,7 +2,6 @@
 
 <div align="center">
 
-![SpaceEx Logo](static/images/favicon.jpg)
 
 **Advanced Machine Learning Platform for Astronomical Discovery**
 
@@ -32,9 +31,12 @@
 ## 🌌 Project Overview
 
 SpaceEx is a sophisticated web application that leverages advanced machine learning algorithms to detect exoplanets from astronomical data. By analyzing light curve data from telescopes like Kepler and TESS, SpaceEx provides astronomers and researchers with a powerful tool for identifying potential exoplanets with unprecedented accuracy.
+---
 
 ### 🎯 Project Vision
 To democratize exoplanet discovery by providing an accessible, accurate, and scalable platform that combines state-of-the-art machine learning with intuitive visualization tools.
+
+---
 
 ### 🔬 Scientific Significance
 - **Automated Detection**: Reduces manual analysis time from weeks to minutes
@@ -53,6 +55,7 @@ To democratize exoplanet discovery by providing an accessible, accurate, and sca
 - **🎯 Confidence Metrics**: Detailed confidence scores for each prediction
 - **📱 Responsive Design**: Works seamlessly on desktop and mobile devices
 - **⚡ Fast Inference**: Optimized model serving with FastAPI
+---
 
 ### 🎨 User Experience
 - **Intuitive Interface**: Clean, space-themed design with smooth animations
@@ -60,6 +63,8 @@ To democratize exoplanet discovery by providing an accessible, accurate, and sca
 - **Progress Indicators**: Visual feedback during model inference
 - **Export Ready**: Structured results for further analysis
 - **Error Handling**: Comprehensive validation and user-friendly error messages
+
+---
 
 ### 🔧 Technical Features
 - **RESTful API**: Well-documented endpoints for integration
@@ -120,6 +125,8 @@ graph TB
 
 **How it works**: The architecture follows a client-server pattern where the browser interacts with FastAPI endpoints, which orchestrate ML model predictions and return structured results with visualizations.
 
+---
+
 ### Request Processing Pipeline
 
 ```mermaid
@@ -157,6 +164,8 @@ sequenceDiagram
 ```
 
 **Pipeline Explanation**: Each numbered step represents a critical stage in processing user data, from initial upload through ML inference to final visualization.
+
+---
 
 ### Static Asset Delivery System
 
@@ -228,6 +237,8 @@ graph TB
 
 **Training Flow**: The pipeline processes astronomical data through cleaning, scaling, and splitting before training individual models and combining them into an ensemble.
 
+---
+
 ### Multi-Model Prediction Workflow
 
 ```mermaid
@@ -255,6 +266,8 @@ graph LR
 ```
 
 **Prediction Process**: Features are scaled consistently across all models, then routed to the selected predictor for unified result formatting.
+
+---
 
 ### Model Ensemble Strategy
 
@@ -294,6 +307,8 @@ graph TB
 - 4GB RAM minimum
 - 2GB disk space for models
 
+---
+
 ### Step-by-Step Installation
 
 ```bash
@@ -318,6 +333,7 @@ python app.py
 # 6. Open browser and navigate to
 # http://localhost:8000
 ```
+---
 
 ### Project Structure
 
@@ -354,6 +370,8 @@ SpaceEx/
 └── README.md                  # This file
 ```
 
+---
+
 ### Configuration
 
 Create a `.env` file for custom settings:
@@ -389,12 +407,15 @@ graph TD
     style E fill:#10b981,color:#fff
     style G fill:#8b5cf6,color:#fff
 ```
+---
 
 ### Step-by-Step Tutorial
 
 1. **Access the Platform**
    - Navigate to `http://localhost:8000`
    - Explore the homepage with project information
+     <img width="1819" height="958" alt="image" src="https://github.com/user-attachments/assets/be8eda4b-ad15-4166-b8c5-7ffab0a99852" />
+---
 
 2. **Upload Your Data**
    - Click "Predict" in navigation
@@ -407,21 +428,32 @@ graph TD
      - **CatBoost**: Handles categorical features well
      - **LightGBM**: Efficient with large datasets
      - **Ensemble**: Combined wisdom of all models
+       <img width="1852" height="966" alt="image" src="https://github.com/user-attachments/assets/9be19b92-2bc2-4fd6-a39d-8d6a31929461" />
+---
+
 
 4. **Preview and Validate**
    - Review your data in the preview panel
    - Ensure all required features are present
+     <img width="1835" height="968" alt="image" src="https://github.com/user-attachments/assets/f6ac3875-5f4e-4be0-bf46-6d4cb8c6c459" />
+---
+
 
 5. **Run Analysis**
    - Click "Analyze Data"
    - Watch real-time progress indicators
    - Wait 2-5 seconds for results
+     <img width="1816" height="975" alt="image" src="https://github.com/user-attachments/assets/9ac47687-3f44-4fd5-8f75-3ca4ad2667b3" />
+---
 
 6. **Interpret Results**
    - Review prediction statistics
    - Examine confidence scores
    - Explore interactive visualizations
+     <img width="1833" height="956" alt="image" src="https://github.com/user-attachments/assets/2a364fdf-5418-4928-8b58-6b86b9842d9d" />
+     <img width="1817" height="976" alt="image" src="https://github.com/user-attachments/assets/8709639a-b355-4e5a-b247-7c653669655e" />
 
+---
 ### Input Data Format
 
 Your CSV should contain these columns (example):
@@ -452,6 +484,8 @@ graph LR
     style D fill:#10b981,color:#fff
     style H fill:#8b5cf6,color:#fff
 ```
+
+===
 
 ### Detailed API Specifications
 
@@ -522,6 +556,8 @@ xychart-beta
     bar [89.2, 91.5, 90.1, 93.8]
 ```
 
+---
+
 ### Feature Importance Analysis
 
 ```mermaid
@@ -540,6 +576,8 @@ graph LR
     style F fill:#f59e0b,color:#000
     style I fill:#ef4444,color:#fff
 ```
+
+---
 
 ### Confidence Distribution
 
@@ -563,6 +601,8 @@ pie title Prediction Confidence Levels
 | **Frontend Developer** | Vraj | UI/UX Design & Implementation |
 | **Data Scientist** | Parth | Data Processing & Analysis |
 | **DevOps Engineer** | Akshat | Deployment & Optimization |
+
+---
 
 ### Development Workflow
 
