@@ -596,11 +596,11 @@ pie title Prediction Confidence Levels
 
 | Role | Name | Contribution |
 |------|------|--------------|
-| **Project Lead** | Dhruvil | System Architecture & Backend |
+| **Fullstack Developer** | Dhruvil | System Architecture & Backend |
 | **ML Engineer** | Krisha | Model Development & Training |
 | **Frontend Developer** | Vraj | UI/UX Design & Implementation |
 | **Data Scientist** | Parth | Data Processing & Analysis |
-| **DevOps Engineer** | Akshat | Deployment & Optimization |
+| **Project Lead** | Akshat | Deployment & Optimization |
 
 ---
 
