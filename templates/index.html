@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Detector - Home</title>
+    <!-- FIXED PATH: Remove the leading slash -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" type="image/png" href="static/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Binary Stars Background -->
+    <div class="stars" id="starsContainer"></div>
+
+    <nav>
+    <div class="nav-container">
+        <div class="brand">EXOPLANET DETECTOR</div>
+        <div class="nav-links">
+            <!-- These links now point to FastAPI routes -->
+            <a href="/" class="active">Home</a>
+            <a href="/predict">Predict</a>
+        </div>
+    </div>
+</nav>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <div class="glass-card">
+            <h1>🌌 Exoplanet Detection System</h1>
+            <p class="text-white">Advanced machine learning platform for detecting exoplanets from astronomical data. Professional-grade analysis with scientific precision.</p>
+            
+            <div style="margin-top: 2.5rem;">
+                <h2>🔬 Scientific Workflow</h2>
+                <ol style="margin-left: 1.5rem; margin-top: 1.5rem; line-height: 2;">
+                    <li><strong class="text-blue">Data Acquisition</strong> - Upload light curve CSV files</li>
+                    <li><strong class="text-blue">Model Selection</strong> - Choose between XGBoost or Ensemble algorithms</li>
+                    <li><strong class="text-blue">Data Validation</strong> - Preview and verify your dataset</li>
+                    <li><strong class="text-blue">Analysis</strong> - Run advanced pattern detection</li>
+                    <li><strong class="text-blue">Results</strong> - Receive detailed exoplanet predictions</li>
+                </ol>
+            </div>
+
+            <a href="/predict" class="btn" style="display: inline-block; margin-top: 2.5rem; text-decoration: none;">
+                🔍 Begin Analysis
+            </a>
+        </div>
+
+        <!-- Models Section -->
+        <div class="glass-card">
+            <h2>⚙️ Machine Learning Models</h2>
+            <div class="models-grid">
+                <div class="model-card">
+                    <h3 class="text-blue">📊 XGBoost Classifier</h3>
+                    <p class="text-white">Optimized gradient boosting algorithm for astronomical time-series data with exceptional precision.</p>
+                    <ul style="margin-top: 1rem;">
+                        <li class="text-white">High-dimensional feature handling</li>
+                        <li class="text-white">Real-time inference capability</li>
+                        <li class="text-white">Robust missing data processing</li>
+                    </ul>
+                </div>
+                <div class="model-card">
+                    <h3 class="text-blue">🎯 Ensemble Model</h3>
+                    <p class="text-white">Advanced meta-learner combining multiple algorithms for maximum detection accuracy.</p>
+                    <ul style="margin-top: 1rem;">
+                        <li class="text-white">Multi-algorithm consensus</li>
+                        <li class="text-white">Reduced false positive rate</li>
+                        <li class="text-white">Statistical confidence scoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="glass-card">
+            <h2>✨ Scientific Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3 class="text-blue">📈 Data Visualization</h3>
+                    <p class="text-white">Interactive charts and statistical analysis</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="text-blue">⚡ High Performance</h3>
+                    <p class="text-white">Optimized processing for large datasets</p>
+                </div>
+                <div class="feature-item">
+                    <h3 class="text-blue">🔍 Detailed Analytics</h3>
+                    <p class="text-white">Comprehensive prediction metrics</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Create binary stars background
+        function createStars() {
+            const starsContainer = document.getElementById('starsContainer');
+            const starCount = 200;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 2 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 8 + 's';
+                star.style.setProperty('--duration', (Math.random() * 4 + 3) + 's');
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        createStars();
+    </script>
+</body>
+</html>

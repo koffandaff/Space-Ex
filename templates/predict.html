@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Detector - Predict</title>
+    <!-- FIXED PATH -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" type="image/png" href="static/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Binary Stars Background -->
+    <div class="stars" id="starsContainer"></div>
+
+    <nav>
+    <div class="nav-container">
+        <div class="brand">EXOPLANET DETECTOR</div>
+        <div class="nav-links">
+            <!-- Link back to homepage -->
+            <a href="/">Home</a>
+            <a href="/predict" class="active">Predict</a>
+        </div>
+    </div>
+</nav>
+
+    <main class="container">
+        <div class="glass-card">
+            <h1>🔍 Exoplanet Prediction</h1>
+            <p class="text-white">Upload your light curve data and select a machine learning model for analysis.</p>
+
+            <form id="predictionForm">
+                <div class="form-group">
+                    <label for="modelSelect">Analysis Model:</label>
+                    <select id="modelSelect" required>
+                        <option value="">-- Select Analysis Model --</option>
+                        <option value="xgboost">XGBoost</option>
+                        <option value="catboost">CatBoost</option>
+                        <option value="votingensemble">VotingEnsemble</option>
+                        <option value="lightgbm">LightGBM</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="csvFile">Upload Data File:</label>
+                    <input type="file" id="csvFile" accept=".csv" required>
+                    <small style="color: #888; display: block; margin-top: 0.5rem;" class="text-white">
+                        Supported: CSV files up to 10MB. Expected format: Light curve time-series data.
+                    </small>
+                </div>
+
+                <button type="submit" class="btn" id="predictBtn">
+                    🚀 Analyze Data
+                </button>
+            </form>
+        </div>
+
+        <!-- CSV Preview Section -->
+        <div class="glass-card" id="previewSection" style="display: none;">
+            <h2 class="text-blue">📋 Data Preview</h2>
+            <div id="csvPreview" class="csv-preview"></div>
+            <button class="btn" id="confirmPredict" style="margin-top: 1rem;">
+                ✅ Confirm & Analyze
+            </button>
+        </div>
+
+        <!-- Loading Spinner -->
+        <div class="loading" id="loadingSpinner">
+            <div class="spinner"></div>
+            <p class="text-blue">Processing astronomical data... This may take a few moments.</p>
+        </div>
+
+        <!-- Results Section -->
+        <div class="glass-card results-section" id="resultsSection">
+            <h2 class="text-blue">📊 Analysis Results</h2>
+            <div id="resultsContent" class="text-white"></div>
+        </div>
+    </main>
+
+    <!-- FIXED PATH -->
+    <script src="static/js/predict.js"></script>
+    
+    <script>
+        // Create binary stars background for predict page
+        function createStars() {
+            const starsContainer = document.getElementById('starsContainer');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 2 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 6 + 's';
+                star.style.setProperty('--duration', (Math.random() * 3 + 2) + 's');
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        createStars();
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.sqlite
+*.db
+instance/
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# Distribution files
+dist/
+build/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
+EOF
