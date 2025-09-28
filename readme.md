@@ -313,7 +313,7 @@ graph TB
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/spaceex.git
+git clone https://github.com/koffandaff/spaceex.git
 cd spaceex
 
 # 2. Create virtual environment
